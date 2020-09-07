@@ -1,0 +1,20 @@
+<div class="container">
+  <table class="table" *ngIf="company$ | async as company">
+    <tr>
+      <td>Name</td>
+      <td>{{company.name}}</td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td>{{company.address}}</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>{{company.type.value}}</td>
+    </tr>
+    <tr>
+      <td>Active</td>
+      <td>{{company.active}}</td>
+    </tr>
+  </table>
+</div>

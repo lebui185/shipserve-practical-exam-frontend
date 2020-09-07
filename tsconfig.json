@@ -15,6 +15,11 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@authentication": ["./src/app/authentication/index"],
+      "@environment/*": ["./src/environments/*"],
+      "@constant": ["./src/app/constant"]
+    }
   }
 }

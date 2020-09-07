@@ -1,0 +1,32 @@
+<div class="card card-default login-form-card">
+  <div class="card-body">
+    <h1 class="h4">ShipServ java practical exam</h1>
+
+    <form novalidate [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="form-group">
+        <label for="username-input">Username</label>
+        <input
+          type="text"
+          formControlName="username"
+          class="form-control"
+          id="username-input"
+        />
+        <div class="text-danger" *ngIf="showLoginFormValidation && loginForm.controls.username.errors?.required">Username is required</div>
+      </div>
+      <div class="form-group">
+        <label for="password-input">Password</label>
+        <input
+          type="password"
+          formControlName="password"
+          class="form-control"
+          id="password-input"
+        />
+        <div class="text-danger" *ngIf="showLoginFormValidation && loginForm.controls.password.errors?.required">Password is required</div>
+      </div>
+
+      <div class="text-danger mb-3" *ngIf="loginForm.errors?.incorrectUsernamePassword">Username or password is incorrect</div>
+
+      <button type="submit" class="btn btn-block btn-success">Login</button>
+    </form>
+  </div>
+</div>
