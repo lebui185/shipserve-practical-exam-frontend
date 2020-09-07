@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  serverApiUrl: 'https://evening-inlet-63376.herokuapp.com/api'
 };
